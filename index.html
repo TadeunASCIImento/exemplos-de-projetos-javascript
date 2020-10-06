@@ -30,7 +30,7 @@
 		
     <h3 class="form-titulo">Proprietário do veículo</h3>
 
-		<form class="form-proprietario"> 
+		<form class="form-agendamento"> 
       
       <div id="div-proprietario"class="form-group">
 				<label id="lblnome" for="nome">Nome</label>
@@ -63,7 +63,7 @@
 					<input id="placa" name="placa" type="text" placeholder="Placa do veículo" class="form-control">
 					
           <label id="lblquilometros" for="quilometros">Quilometragem</label>
-					<input id="quilometro" name="quilometro" type="text" placeholder="Quilometragem do veículo" class="form-control">
+					<input id="quilometros" name="quilometros" type="text" placeholder="Quilometragem do veículo" class="form-control">
 					
           <label id="lblcor" for="">Cor</label>
 					<input id="cor" name="cor" type="text" placeholder="Cor do veículo" class="form-control">
@@ -74,9 +74,10 @@
           <label for="lblobservacoes">Observações sobre o veículo.</label>
           <textarea class="form-control" rows="10" id="observacoes" name="observacoes" type="text"></textarea>
 				</div>
-        
+       <input id="confirmar" name="confirmar" type="submit" value="Confirmar agendamento" class="btn btn-primary"> 
 			</form>
 	</div>
+	<script src="js/proprietario.js"></script>
 </body>
 
 </html>

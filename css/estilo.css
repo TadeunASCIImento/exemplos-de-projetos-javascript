@@ -1,5 +1,5 @@
 *{
-    font-family: cursive;
+    font-family: monospace;
 }
 .menu{
     margin:40px 0px 20px 0px;
@@ -21,4 +21,10 @@
 }
 #marca,#modelo,#placa,#quilometros,#cor{
     height: 50px;
+}
+label{
+    font-size: 1.3em;    
+}
+.nav-link{
+    font-size: 1.3em; 
 }
