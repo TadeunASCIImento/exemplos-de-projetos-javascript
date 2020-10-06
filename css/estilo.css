@@ -1,0 +1,24 @@
+*{
+    font-family: cursive;
+}
+.menu{
+    margin:40px 0px 20px 0px;
+}
+.titulo{
+    text-align: center;
+}
+.header{
+    margin-top: 20px;
+}
+.form-titulo{
+    margin-top: 50px;
+}
+#div-proprietario,#div-veiculo,#div-servico{
+    width: 50%;
+}
+#nome,#sobrenome,#endereco,#telefone,#email{
+    height: 50px;
+}
+#marca,#modelo,#placa,#quilometros,#cor{
+    height: 50px;
+}
