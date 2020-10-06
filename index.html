@@ -90,30 +90,30 @@
 			</div>
 				
 			<h3 class="serv-titulo">Descrição do serviço</h3>
-			
+
 			<div class="form-row">
-			
 			<div class="form-group col-md-4">
-				<select id="servicos" name="servicos" class="custom-select">
-					<option value="volvo">Selecione o tipo de serviço</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
+				<select id="servico" name="servico" class="custom-select">
+					<option value="mecanica">Selecione o tipo de serviço</option>
+					<option value="funilaria">Funilaria</option>
+					<option value="instalacao">Instalação</option>
 				</select>
 			</div>
 			
 			<div class="form-group col-md-4">
-			<label for="data-agendamento">Data de agendamento</label>
-			<input id="data-agendamento" name="data-agendamento" type="date"></div>
+			<label for="inicio">Data de agendamento</label>
+			<input id="inicio" name="inicio" type="date"></div>
 
 			<div class="form-group col-md-4">
-			<label for="data-retirada">Data de retirada</label>
-			<input id="data-retirada" name="data-retirada" type="date"></div>
+			<label for="fim">Data de retirada</label>
+			<input id="fim" name="fim" type="date"></div>
 			</div>
 
 			<div id="div-descricao" class="form-group">
 				<label for="descricao-servico">Descreva os detalhes do serviço.</label>
-				<textarea class="form-control" rows="4" id="descricao" name="descricao" type="text"></textarea>
+				<textarea id="descricao" name="descricao" type="text"rows="4"class="form-control"></textarea>
 			</div>
+			
 			<input id="confirmar" name="confirmar" type="submit" value="Confirmar agendamento" class="btn btn-primary"> </form>
 	</div>
 </div>

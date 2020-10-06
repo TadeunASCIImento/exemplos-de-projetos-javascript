@@ -12,7 +12,12 @@ confirmar.addEventListener('click',function(event){
     console.log(propietario);
 
     const veiculo = obterVeiculo(formulario);
-    console.log(veiculo) 
+    console.log(veiculo);
+
+    const servico = obterServico(formulario);
+    console.log(servico); 
+
+
 });
 
 // obtem dados do proprietário.
@@ -38,4 +43,16 @@ function obterVeiculo(formulario){
         observacoes:formulario.observacoes.value,
      }
      return veiculo;
+}
+
+// obtem os dados do serviço.
+function obterServico(formulario){
+    let servico = {
+        tipo:formulario.servico.value,
+        inicio:formulario.inicio.value,
+        fim:formulario.fim.value,
+        descricao:formulario.descricao.value
+    }
+    return servico;
+
 }
