@@ -1,4 +1,4 @@
-// proprietario.js
+// formulario.js
 
 const formulario = document.querySelector(".form-agendamento");
 

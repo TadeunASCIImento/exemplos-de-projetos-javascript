@@ -5,17 +5,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oficina mecânica JavaScript</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 
 <body>
-
-	<div class="container">
-
+<div class="container">
+     <div class="jumbotron">
 		<header class="header">
 			<h1 class="titulo">Oficina mecânica JavaScript</h1>
 			<nav class="menu">
@@ -26,58 +25,99 @@
 			</nav>
 		</header>
 
-    <h2 class="subtitulo">Agendamento de serviços</h2>
+		<h3 class="form-titulo">Dados do proprietário do veículo</h3>
 		
-    <h3 class="form-titulo">Proprietário do veículo</h3>
-
-		<form class="form-agendamento"> 
-      
-      <div id="div-proprietario"class="form-group">
-				<label id="lblnome" for="nome">Nome</label>
-				<input id="nome" name="nome" type="text" placeholder="Nome do proprietário do veículo"class="form-control">
+		<form class="form-agendamento">
 			
-      	<label id="lblsobrenome" for="sobrenome">Sobrenome</label>
-				<input id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome do proprietário do veículo"class="form-control"> 
-			
-      	<label id="lblendereco" for="endereco">Endereço</label>
-				<input id="endereco" name="endereco" type="text" placeholder="Endereço do proprietário do veículo" class="form-control">
-			
-      	<label id="lbltelefone" for="telefone">Telefone</label>
-				<input id="telefone" name="telefone" type="text" placeholder="Telefone do proprietário do veículo"class="form-control">
-			
-      	<label id="lblemail" for="">Email</label>
-				<input id="email" name="email" type="text" placeholder="Informe o endereço do proprietário do veículo" class="form-control">
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label id="lblnome" for="nome">Nome</label>
+					<input id="nome" name="nome" type="text" placeholder="Nome do proprietário do veículo" class="form-control"> </div>
+				<div class="form-group col-md-6">
+					<label id="lblsobrenome" for="sobrenome">Sobrenome</label>
+					<input id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome do proprietário do veículo" class="form-control"> </div>
 			</div>
 
-      <h3 class="form-titulo">Dados do veículo</h3>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label id="lblendereco" for="endereco">Endereço</label>
+					<input id="endereco" name="endereco" type="text" placeholder="Endereço do proprietário do veículo" class="form-control"> </div>
+				<div class="form-group col-md-4">
+					<label id="lbltelefone" for="telefone">Telefone</label>
+					<input id="telefone" name="telefone" type="text" placeholder="Telefone do proprietário do veículo" class="form-control"> </div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label id="lblemail" for="">Email</label>
+					<input id="email" name="email" type="text" placeholder="Informe o endereço do proprietário do veículo" class="form-control"> </div>
+			</div>	
+			
+			<h3 class="form-titulo">Dados do veículo</h3>
 
-				<div id="div-veiculo"class="form-group">
-					
-          <label id="lblmarca" for="marca">Marca</label>
-					<input id="marca" name="marca" type="text" placeholder="Marca do veículo" class="form-control">
-					
-          <label id="lblmodelo" for="modelo">Modelo</label>
-					<input id="modelo" name="modelo" type="text" placeholder="Modelo do veículo" class="form-control"> 
-					
-          <label id="lblplaca" for="placa">Placa</label>
-					<input id="placa" name="placa" type="text" placeholder="Placa do veículo" class="form-control">
-					
-          <label id="lblquilometros" for="quilometros">Quilometragem</label>
-					<input id="quilometros" name="quilometros" type="text" placeholder="Quilometragem do veículo" class="form-control">
-					
-          <label id="lblcor" for="">Cor</label>
-					<input id="cor" name="cor" type="text" placeholder="Cor do veículo" class="form-control">
-        
-        </div>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+				<label id="lblmarca" for="marca">Marca</label>
+				<input id="marca" name="marca" type="text" placeholder="Marca do veículo" class="form-control"></div>
+				
+				<div class="form-group col-md-4">
+				<label id="lblmodelo" for="modelo">Modelo</label>
+				<input id="modelo" name="modelo" type="text" placeholder="Modelo do veículo" class="form-control"></div>
 
-				<div id="div-servico" class="form-group">
-          <label for="lblobservacoes">Observações sobre o veículo.</label>
-          <textarea class="form-control" rows="10" id="observacoes" name="observacoes" type="text"></textarea>
-				</div>
-       <input id="confirmar" name="confirmar" type="submit" value="Confirmar agendamento" class="btn btn-primary"> 
-			</form>
+				<div class="form-group col-md-4">	
+				<label id="lblplaca" for="placa">Placa</label>
+				<input id="placa" name="placa" type="text" placeholder="Placa do veículo" class="form-control"></div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-4">
+				<label id="lblquilometros" for="quilometros">Quilometragem</label>
+				<input id="quilometros" name="quilometros" type="text" placeholder="Quilometragem do veículo" class="form-control"></div>
+				
+				<div class="form-group col-md-4">
+				<label id="lblcor" for="">Cor</label>
+				<input id="cor" name="cor" type="text" placeholder="Cor do veículo" class="form-control"> </div>
+
+				<div class="form-group col-md-4">
+				<label id="lblano" for="">Ano/modelo</label>
+				<input id="ano" name="ano" type="text" placeholder="Ano do veículo" class="form-control"> </div>
+			</div>
+
+
+			<div class="form-group">
+				<label for="lblobservacoes">Observações sobre o veículo.</label>
+				<textarea class="form-control" rows="4" id="observacoes" name="observacoes" type="text"></textarea>
+			</div>
+				
+			<h3 class="serv-titulo">Descrição do serviço</h3>
+			
+			<div class="form-row">
+			
+			<div class="form-group col-md-4">
+				<select id="servicos" name="servicos" class="custom-select">
+					<option value="volvo">Selecione o tipo de serviço</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+				</select>
+			</div>
+			
+			<div class="form-group col-md-4">
+			<label for="data-agendamento">Data de agendamento</label>
+			<input id="data-agendamento" name="data-agendamento" type="date"></div>
+
+			<div class="form-group col-md-4">
+			<label for="data-retirada">Data de retirada</label>
+			<input id="data-retirada" name="data-retirada" type="date"></div>
+			</div>
+
+			<div id="div-descricao" class="form-group">
+				<label for="descricao-servico">Descreva os detalhes do serviço.</label>
+				<textarea class="form-control" rows="4" id="descricao" name="descricao" type="text"></textarea>
+			</div>
+			<input id="confirmar" name="confirmar" type="submit" value="Confirmar agendamento" class="btn btn-primary"> </form>
 	</div>
-	<script src="js/proprietario.js"></script>
+</div>
+	<script src="js/formulario.js"></script>
 </body>
 
 </html>
