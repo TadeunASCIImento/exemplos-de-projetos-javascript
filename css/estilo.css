@@ -1,6 +1,33 @@
-.jumbotron{
-    background-color: white;
-}
 .header{
     margin-bottom: 60px;
+}
+.menu{
+    margin-top: 40px;
+}
+.titulo{
+    font-family: cursive;
+    text-align: center;
+    color: #e85d04;
+}
+.form-control{
+  height: 50px;
+}
+.form-agendamento{
+    margin-top: 20px;
+}
+.custom-select{
+    height: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+#inicio,#fim{
+    text-align: center;
+}
+.nav-link{
+    color: #e85d04;
+}
+.btn-secondary{
+     height: 50px;
+    background-color: #e85d04;
+    border: none;
 }

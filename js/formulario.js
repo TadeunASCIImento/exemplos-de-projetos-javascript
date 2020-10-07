@@ -1,6 +1,5 @@
 // formulario.js
 
-const formulario = document.querySelector(".form-agendamento");
 
 // evento do botão de confirmação
 const confirmar = document.querySelector("#confirmar");
@@ -8,13 +7,14 @@ confirmar.addEventListener('click',function(event){
     event.preventDefault();
     console.log('Evento click do botão capturado.');
 
+    const formulario = document.querySelector(".form-agendamento");
+        
     const propietario = obterProprietario(formulario);
-    console.log(propietario);
-
     const veiculo = obterVeiculo(formulario);
-    console.log(veiculo);
-
     const servico = obterServico(formulario);
+    
+    console.log(propietario);
+    console.log(veiculo);
     console.log(servico); 
 
 
