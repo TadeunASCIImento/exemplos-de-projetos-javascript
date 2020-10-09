@@ -26,8 +26,18 @@
 .nav-link{
     color: #e85d04;
 }
+
+.card{
+    margin-top: 30px;
+}
+.container{
+    margin-bottom: 40px;
+}
+.btn{
+  margin: 11px 11px 11px 11px;
+}
 .btn-secondary{
-     height: 50px;
-    background-color: #e85d04;
+    background-color:#e85d04 ;
     border: none;
+    height: 50px;
 }

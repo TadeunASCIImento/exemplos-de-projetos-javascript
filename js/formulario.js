@@ -8,44 +8,68 @@ confirmar.addEventListener('click',function(event){
     console.log('Evento click do botão capturado.');
 
     const formulario = document.querySelector(".form-agendamento");    
+    
     const propietario = obterProprietario(formulario);
     const veiculo = obterVeiculo(formulario);
     const servico = obterServico(formulario);
-    let trServico = novaTr(veiculo,servico);
-    let tabela = document.querySelector("#servicos-agendados");
-    tabela.appendChild(trServico);
-    formulario.request();
-    
-    console.log(propietario);
-    console.log(veiculo);
-    console.log(servico); 
+
+    let row= document.querySelector(".row");
+
+    row.appendChild(montaCard(servico));
 
 
 });
-// monta linha do novo serviço na tabela.
-function novaTr(veiculo,servico){
-    let trServico = document.createElement("tr");
-    trServico.appendChild(novaTd(veiculo.marca,"td-marca"));
-    trServico.appendChild(novaTd(veiculo.modelo,"td-modelo"));
-    trServico.appendChild(novaTd(veiculo.placa,"td-placa"));
-    trServico.appendChild(novaTd(veiculo.quilometros,"td-quilometros"));
-    trServico.appendChild(novaTd(veiculo.cor,"td-cor"));
-    trServico.appendChild(novaTd(veiculo.ano,"td-ano"));
-    trServico.appendChild(novaTd(veiculo.observacoes,"td-obs-veiculo"));
-    trServico.appendChild(novaTd(servico.tipo,"td-tipo"));
-    trServico.appendChild(novaTd(servico.descricao,"td-descricao"));
-    trServico.appendChild(novaTd(servico.inicio,"td-inicio"));
-    trServico.appendChild(novaTd(servico.fim,"td-fim"));
-    trServico.appendChild(novaTd(servico.observacoes,"td-obs-servico"));
-    return trServico;
+
+function montaCard(servico){    
+
+    let col = document.createElement("div");
+    col.classList.add("col-sm-4");    
+
+    let card = document.createElement("div");
+    card.classList.add("card");
+
+    card.appendChild(montaBody(servico));
+    col.appendChild(card);
+
+    return col;
 
 }
 
-function novaTd(dado,classe){
-    let td = document.createElement("td");
-    td.textContent = dado;
-    td.classList.add(classe);
-    return td;
+
+function montaBody(servico){  
+    let body = document.createElement("div");
+        body.classList.add("card-body")
+
+    let title = document.createElement("h5");
+      title.classList.add("card-title");
+      title.textContent = servico.tipo;
+
+    let p = document.createElement("p");
+      p.classList.add("card-text");
+      p.textContent = servico.descricao;
+
+     let a1 = document.createElement("a");
+      a1.classList.add("btn");
+      a1.classList.add("btn-success");
+      a1.textContent = "Iniciar"; 
+
+    let a2 = document.createElement("a");
+      a2.classList.add("btn");
+      a2.classList.add("btn-danger");
+      a2.textContent = "Finalizar"; 
+
+    let a3 = document.createElement("a");
+      a3.classList.add("btn"); 
+      a3.classList.add("btn-primary");
+      a3.textContent = "Detalhes";
+
+      body.appendChild(title);
+      body.appendChild(p);
+      body.appendChild(a1);
+      body.appendChild(a2);
+      body.appendChild(a3);
+
+    return body;
 
 }
 
